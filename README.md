@@ -62,3 +62,7 @@ Expand the tuning search with a custom regularization grid:
 ```powershell
 python -m src.generate_counterfactuals --index 11 --tune --c-grid 0.01,0.1,1,10 --cv 5
 ```
+
+### Sample Output
+
+An end-to-end run (tuned, index 11) is captured in [`example/ExampleOutput.txt`](example/ExampleOutput.txt).

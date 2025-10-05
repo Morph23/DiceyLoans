@@ -1,0 +1,57 @@
+PS C:\Users\kshit\Projects 2\DiCE> cd "c:\Users\kshit\Projects 2\DiCE" ; python -m src.generate_counterfactuals --index 11 --tune
+100%|██████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.25it/s]
+{
+  "csv_path": "C:\\Users\\kshit\\Projects 2\\DiCE\\loan_approval_dataset.csv",
+  "target_column": "loan_status",
+  "index": 11,
+  "model_accuracy": 0.9519906323185011,
+  "dice_method": "random",
+  "generation_method": "random",
+  "desired_label": "Approved",
+  "tuned": true,
+  "model_best_params": {
+    "model__C": 1.0,
+    "model__class_weight": null
+  },
+  "original_probability": 0.46964349147878137,
+  "original_label": 0,
+  "original_label_name": "Rejected",
+  "counterfactual_probability": 0.9629460644138775,
+  "counterfactual_label": 1,
+  "counterfactual_label_name": "Approved",
+  "original_features": {
+    "loan_id": 12,
+    "no_of_dependents": 2,
+    "education": "Not Graduate",
+    "self_employed": "Yes",
+    "income_annum": 6700000,
+    "loan_amount": 22700000,
+    "loan_term": 18,
+    "cibil_score": 538,
+    "residential_assets_value": 15300000,
+    "commercial_assets_value": 5800000,
+    "luxury_assets_value": 20400000,
+    "bank_asset_value": 6400000
+  },
+  "counterfactual_features": {
+    "loan_id": 12.0,
+    "income_annum": 6700000.0,
+    "loan_amount": 22700000.0,
+    "cibil_score": 538.0,
+    "residential_assets_value": 15300000.0,
+    "commercial_assets_value": 5800000.0,
+    "luxury_assets_value": 20400000.0,
+    "bank_asset_value": 6400000.0,
+    "no_of_dependents": 2,
+    "education": "Not Graduate",
+    "self_employed": "Yes",
+    "loan_term": 2
+  },
+  "changes": [
+    {
+      "feature": "loan_term",
+      "original": 18,
+      "counterfactual": 2,
+      "delta": 1.0
+    }
+  ]
